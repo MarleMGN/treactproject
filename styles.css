@@ -934,6 +934,11 @@ img {
     transition: all 300ms ease;
 }
 
+.start__button:nth-child(2) {
+    border: 1px solid rgb(160, 174, 192);
+    transition: all 300ms ease;
+}
+
 /* FOOTER */
 
 footer {
@@ -1025,6 +1030,11 @@ footer {
     z-index: 2;
     cursor: pointer;
     transition: all 300ms ease;
+}
+
+.footer__social--link svg {
+    height: 16px;
+    width: 16px;
 }
 
 .footer__logo {
@@ -1124,6 +1134,10 @@ footer {
         max-width: 768px;
     }
 
+    .feature {
+        width: calc(50%);
+    }
+
     .feature__row {
         padding: 32px 8px;
         margin: 0 16px;
@@ -1167,6 +1181,7 @@ footer {
     }
 
     .start__row {
+        display: flex;
         flex-direction: column;
     }
 
@@ -1179,6 +1194,10 @@ footer {
     .start__buttons {
         width: auto;
         margin-top: 24px;
+    }
+
+    .value {
+        margin-top: 40px;
     }
 }
 
@@ -1300,6 +1319,7 @@ footer {
     }
 
     .start__buttons {
+        display: flex;
         flex-direction: column;
     }
 
@@ -1315,6 +1335,23 @@ footer {
         padding: 12px 24px;
         font-size: 14px;
     }
+
+    .footer__columns {
+        justify-content: center;
+    }
+
+    .footer__column {
+        width: auto;
+        padding: 0 16px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer__copyright {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.5;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1324,6 +1361,11 @@ footer {
 
     .features {
         justify-content: center;
+    }
+
+    .feature {
+        width: auto;
+        max-width: 384px;
     }
 
     #quality .row, #values .row {
@@ -1366,6 +1408,40 @@ footer {
 
     .testimonials__description {
         padding-left: 0;
+    }
+
+    .footer__columns {
+        justify-content: flex-start;
+    }
+
+    .footer__column {
+        width: calc(100% / 3);
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__copyright, .footer__socials {
+        margin-top: 32px;
+    }
+
+    .footer__socials {
+        margin-left: 0px;
+    }
+
+    .footer__social--link:first-child {
+        margin-left: 0px;
+    }
+
+    .value:nth-of-type(1) {
+        margin-right: 0px;
+    }
+
+    .value {
+        margin-right: 0px;
+        align-items: center;
     }
 }
 
