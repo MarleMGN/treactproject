@@ -22,6 +22,7 @@ header .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .container {
@@ -100,10 +101,11 @@ img {
 /* LANDING */
 
 .header__description {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 40%
 }
 
 .header__description--para {
@@ -170,6 +172,7 @@ img {
 
 .header__img--wrapper {
     width: calc(100% - 40%);
+    justify-content: flex-end;
 }
 
 .nav {
@@ -218,6 +221,8 @@ img {
     position: relative;
     transition: all 300ms;
     margin: 0 24px;
+    text-decoration: none;
+    color: black;
 }
 
 .nav__link::after {
@@ -230,6 +235,13 @@ img {
     background: #6415ff;
     transition: all 300ms ease;
     opacity: 0;
+    transform: scaleX(0);
+    transition: all 300ms ease;
+}
+
+.nav__link:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
 }
 
 .nav__link--primary {
@@ -242,6 +254,10 @@ img {
     line-height: 1.5;
     border: none;
     transition: all 300ms ease;
+}
+
+.nav__link--primary:hover {
+    background-color: rgb(80, 17, 204)
 }
 
 .login {
@@ -360,6 +376,11 @@ img {
     display: flex;
     align-items: flex-start;
     padding: 32px 24px;
+}
+
+.feature__img {
+    width: 24px;
+    height: 24px;
 }
 
 .feature__img--wrapper {
@@ -508,7 +529,11 @@ img {
 
 /* VALUES */
 
-.values__description .values__img {
+#values .row {
+    display: flex;
+}
+
+.values__description, .values__img {
     width: 50%;
 }
 
@@ -1466,6 +1491,11 @@ footer {
 
     .header__img {
         max-width: 512px;
+    }
+
+    .header__img--wrapper {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .steps__grid {
