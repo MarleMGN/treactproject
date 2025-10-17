@@ -333,6 +333,12 @@ img {
     align-items: center;
 }
 
+.row__narrow {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 .section__tag {
     font-size: 16px;
     color: #6415ff;
@@ -366,6 +372,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
+    align-items: center;
 }
 
 .feature {
